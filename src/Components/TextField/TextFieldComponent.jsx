@@ -5,8 +5,14 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import DirectionsIcon from "@mui/icons-material/Directions";
+import { useDispatch } from "react-redux";
+import { inputSearch } from "../../Action/action";
 
 function TextFieldComponent() {
+  const dispatch = useDispatch();
+  const handleOnChange = (e) => {
+    dispatch(inputSearch(e.target.value));
+  };
   return (
     <Paper
       component="form"
@@ -21,6 +27,7 @@ function TextFieldComponent() {
         sx={{ ml: 1, flex: 1 }}
         placeholder="Find a Receipe or ingredient"
         inputProps={{ "aria-label": "Find a Receipe or ingredient" }}
+        onChange={handleOnChange}
       />
       <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
         <SearchIcon />

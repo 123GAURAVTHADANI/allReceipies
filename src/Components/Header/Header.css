@@ -2,6 +2,14 @@
   display: flex;
   align-items: center;
 }
+.flex-direction {
+  flex-direction: column;
+}
+.nav {
+  gap: 20px;
+  list-style: none;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -12,5 +20,5 @@
   justify-content: space-around;
 }
 img {
-  width: 15%;
+  width: 12%;
 }
