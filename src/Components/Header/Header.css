@@ -1,0 +1,16 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+.w-100 {
+  width: 100%;
+}
+.container {
+  border-bottom: 1px solid lightgray;
+}
+.header {
+  justify-content: space-around;
+}
+img {
+  width: 15%;
+}
