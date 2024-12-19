@@ -1,6 +1,6 @@
 import { SEARCH } from "../Action/action";
 
-export const initialState = { search: "", loading: false };
+export const initialState = { search: "pasta" };
 function reducer(state = initialState, action) {
   switch (action.type) {
     case SEARCH:

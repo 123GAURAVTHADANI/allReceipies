@@ -7,11 +7,15 @@ import SearchIcon from "@mui/icons-material/Search";
 import DirectionsIcon from "@mui/icons-material/Directions";
 import { useDispatch } from "react-redux";
 import { inputSearch } from "../../Action/action";
+import { debounce } from "../../Utils/debounce";
 
 function TextFieldComponent() {
   const dispatch = useDispatch();
+
   const handleOnChange = (e) => {
     dispatch(inputSearch(e.target.value));
+    // dispatch(debouncedFnc());
+    // debouncedFnc();
   };
   return (
     <Paper

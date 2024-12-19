@@ -42,6 +42,8 @@ const ExpandMore = styled((props) => {
 function CardComponent({ item }) {
   const [expanded, setExpanded] = React.useState(false);
 
+  const [imgSrc, setImageSrc] = React.useState(item.image);
+
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
@@ -65,8 +67,12 @@ function CardComponent({ item }) {
       <CardMedia
         component="img"
         height="194"
-        onError={() => console.log("Error")}
-        image={item.image}
+        onError={() =>
+          setImageSrc(
+            "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800"
+          )
+        }
+        image={imgSrc}
         alt="Paella dish"
       />
       <CardContent>
