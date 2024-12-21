@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import TextFieldComponent from "../TextField/TextFieldComponent";
 import "./Header.css";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -16,7 +17,11 @@ function Header() {
         <div>
           <span className="flex">
             <AccountCircleIcon />
-            <a href="#login">LogIn</a>
+            <Link to={"/login"}>Login</Link>
+          </span>
+          <span className="flex">
+            <AccountCircleIcon />
+            <Link to={"/signup"}>Signup</Link>
           </span>
         </div>
       </header>

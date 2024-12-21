@@ -1,10 +1,11 @@
 import axios from "axios";
 import { debounce } from "../Utils/debounce";
 
-export const SEARCH = "SEARCH";
+export const SEARCH = "SEARCH1";
 export const FETCH_DATA_REQUEST = "FETCH_DATA_REQUEST";
 export const FETCH_DATA_ERROR = "FETCH_DATA_ERROR";
 export const FETCH_DATA_SUCCESS = "FETCH_DATA_SUCCESS";
+
 
 export const inputSearch = (payload) => {
   return {
