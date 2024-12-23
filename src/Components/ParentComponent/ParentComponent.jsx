@@ -1,17 +1,11 @@
-// const Parent = ({ children }) => {
-//   return <div>{children}</div>;
-// };
-
-// const Child = () => {
-//   return <p>This is the child component</p>;
-// };
-
-// const Wrapper = () => {
-//   return (
-//     <Parent>
-//       <Child />
-//     </Parent>
-//   );
-// };
-
-// export default Wrapper;
+function ParentComponent({ children, bgColor, fontSize, color }) {
+  // Children Props
+  console.log(">parent children", children);
+  return (
+    <div style={{ color: color, backgroundColor: bgColor, fontSize: fontSize }}>
+      Parent Component
+      {children}
+    </div>
+  );
+}
+export default ParentComponent;
