@@ -13,7 +13,11 @@ store.subscribe(() => {
   console.log(">>state", store.getState());
 });
 
-createRoot(document.getElementById("root")).render(<Router />);
+createRoot(document.getElementById("root")).render(
+  <Provider store={store}>
+    <Router />
+  </Provider>
+);
 
 ///   <ParentComponent
 // );entComponent color="white" bgColor="black" fontSize="16px">

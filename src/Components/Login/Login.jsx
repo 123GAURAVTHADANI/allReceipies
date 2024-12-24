@@ -14,6 +14,11 @@ function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       setSuccess("Login Successfully!");
+      // JWT (eyzae28732sjS#SDdsdsdsd)
+      localStorage.setItem(
+        "token",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+      );
       setTimeout(() => {
         navigate("/");
       }, 1000);
@@ -40,3 +45,5 @@ function Login() {
   );
 }
 export default Login;
+
+// AUthentication ( JWT create (Login ))
